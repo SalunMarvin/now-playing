@@ -32,7 +32,7 @@
     "socket.io-client": "^2.1.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot --open"
   },
   "author": "Salun Marvin"
 }
