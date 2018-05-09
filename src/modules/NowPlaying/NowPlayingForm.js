@@ -55,7 +55,7 @@ export class NowPlayingForm extends React.Component {
       "count": 5,
       "result_type": "recent",
       "lang": "en",
-      "geocode": this.latitude + "," + this.longitude + ",10000km"
+      "geocode": this.latitude + "," + this.longitude + ",100km"
     }
     if (max_id) {
       body.max_id = max_id
