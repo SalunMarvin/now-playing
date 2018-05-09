@@ -1,5 +1,8 @@
 body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
+    color: #555555;
+    background-color: #EEEEEE;
 }
 
 .app-navbar {
@@ -20,6 +23,10 @@ body {
       max-height: inherit;
       display: flex !important;
       width: 100%;
+      text-align: center;
+      img {
+        margin: 0 auto;
+      }
       .top-menu {
         display: flex;
         -webkit-box-orient: vertical;
@@ -107,8 +114,10 @@ body {
   }
 
   .inputContainer {
+    display: flex;
+    flex-direction: row;
       width: 100%;
-      background-color: #f5f5f5;
+      background-color: white;
       height: 30x;
       padding: 10px 20px;
       margin-top: 10px;
@@ -117,14 +126,26 @@ body {
       border-radius: 4px;
       input {
           margin-left: 10px;
-          border: solid thin #dddddd;
+          border: solid thin transparent;
+          background-color: #EEEEEE;
           border-radius: 4px;
           height: 35px;
-          padding: 5px;
+          padding: 15px;
       }
       .inputBox {
-        float: left;
-        margin-right: 30px;
+        margin-right: 15px;
+        &.flex1 {
+          flex: 1;
+        }
+        &.flex2 {
+          flex:2;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        span {
+          font-weight: 600;
+        }
       }
       .inputButton {
         float: right;
@@ -133,16 +154,20 @@ body {
         background-color :#1DA1F2;
         color: white;
         padding: 5px 20px;
+        font-weight: 600;
+        i {
+          margin-right: 5px;
+        }
       }
   }
 
   .tweetContainer {
     list-style-type: none;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 0;
       li {
           width: 100%;
-          border: solid thin #dddddd;
+          border: solid thin transparent;
           border-radius: 4px;
           padding: 10px;
           background-color: white;
@@ -154,4 +179,67 @@ body {
       font-size: 17px;
       font-weight: 600;
       padding: 3px 0;
+  }
+
+  .userData {
+    width: 100%;
+    .userImg {
+      width:48px;
+      height: 48px;
+      border-radius: 25px;
+      float: left;
+      margin-right: 8px;
+    }
+    .userName {
+      font-weight: bold;
+      margin-top: 4px;
+      font-size: 22px;
+    }
+    .userMention {
+      font-size: 16px;
+      color: #999999;
+    }
+  }
+  .tweetContent {
+    margin-top: 8px;
+    font-size: 24px;
+    width: 100%;
+  }
+  .sharingData {
+    margin-top: 12px;
+    width: 100%;
+    height: 40px;
+    .currentDate {
+      float: left;
+      font-size: 11px;
+      color: #999999;
+    }
+    .sharingLink {
+      display: block;
+      float: right;
+      font-size: 11px;
+      color: #bbbbbb;
+      margin-left: 10px;
+      i {
+        color: #999999;
+        margin-right: 1px;
+        &:hover {
+          color: #3097D1
+        }
+      }
+      &:hover {
+        color: #3097D1
+      }
+
+    }
+  }
+
+  .spinner {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 90px;
+    i {
+      color: #1DA1F2;
+    }
   }
